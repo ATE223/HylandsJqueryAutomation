@@ -20,7 +20,7 @@ public class loginscreen {
 	
 	public static void loginpage() throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver", "E:\\grid\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		WebDriver driver= new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
@@ -28,7 +28,7 @@ public class loginscreen {
 		
 		try
 		{
-			driver.get("http://62.171.183.83:8080/QuaLISWeb/home.html");
+			driver.get("http://62.171.183.83:8080/QuaLISWeb/");
 		}
 		catch(Exception e)
 		{
@@ -61,7 +61,7 @@ public class loginscreen {
 		WebElement country=driver.findElement(By.id("iFormID_5"));
 		country.click();
 		
-		WebElement actionmenu=driver.findElement(By.xpath("//*[@id=\"ID_BC_ActionMenu\"]/a"));
+		WebElement actionmenu=driver.findElement(By.xpath("//*[@id='ID_BC_ActionMenu']/a"));
 		actionmenu.click();
 	
 		WebElement countryadd=driver.findElement(By.id("ID_BC_CountryAddbutton"));
